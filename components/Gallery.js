@@ -24,7 +24,7 @@ const Gallery = () => {
   useEffect(() => {
     const initialImages = Array.from(
       { length: numberOfImages },
-      (_, index) => `image${index + 1}.jpeg`
+      (_, index) => `Image${index + 1}.jpeg`
     );
     setImages(shuffleArray(initialImages)); // Shuffle and set images only once
   }, []); // Empty dependency array ensures this runs only once on mount
