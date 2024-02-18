@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Add this within your global CSS file */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.handwriting-font {
+  font-family: "Indie Flower", cursive;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fullscreen-letter {
+  animation: fadeIn 0.5s ease forwards;
+}
