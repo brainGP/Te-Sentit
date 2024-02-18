@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./Modal.css"; // Make sure the path to your CSS file is correct
+import "./modal.css"; // Make sure the path to your CSS file is correct
 
 const Modal = ({ show, onClose, children }) => {
   const modalRef = useRef(null);
