@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Gallery = () => {
   const numberOfImages = 58;
@@ -48,11 +49,12 @@ const Gallery = () => {
                 className="relative overflow-hidden rounded-lg cursor-pointer shadow-lg hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
                 onClick={() => handleImageClick(`/images/${filename}`)}
               >
-                <img
+                <Image
                   src={`/images/${filename}`}
                   alt={`Image ${index + 1}`}
                   className="w-full h-full object-cover rounded-lg"
-                  loading="lazy"
+                  height={800}
+                  width={500}
                 />
               </div>
             ))}
