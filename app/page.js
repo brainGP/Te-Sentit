@@ -26,7 +26,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Te Sentit</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.webp" />
       </Head>
 
       <main className="flex flex-col items-center justify-center min-h-screen">
@@ -41,7 +41,9 @@ export default function Home() {
 
       <Modal show={modalOpen} onClose={handleCloseModal}>
         <p className="whitespace-pre-wrap">{selectedLetterContent}</p>
-        <p className="mt-4 italic text-right">From: {selectedLetterFrom}</p>
+        <p className="mt-4 italic text-right font-bold">
+          From: {selectedLetterFrom}
+        </p>
       </Modal>
     </div>
   );

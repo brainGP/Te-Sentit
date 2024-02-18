@@ -22,3 +22,16 @@
 .fullscreen-letter {
   animation: fadeIn 0.5s ease forwards;
 }
+body {
+  /* Apply the Google Font */
+  font-family: "Inter", sans-serif; /* Adjust based on your project's font */
+  background-color: #fdf8e1; /* Base color for paper */
+  background-image: radial-gradient(circle, #f7f4e3 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #f7f4e3 20%, transparent 30%),
+    radial-gradient(circle, #f7f4e3 20%, transparent 20%),
+    radial-gradient(circle, #f7f4e3 20%, transparent 20%),
+    linear-gradient(#edebd7 2px, transparent 2px);
+  background-size: 10px 10px, 25px 25px, 50px 50px, 100px 100px, 2px 2px;
+  background-position: 0 0, center, center, center, center;
+  color: #645a4c; /* Text color for readability */
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./Modal.css"; // Make sure the path to your CSS file is correct
 
 const Modal = ({ show, onClose, children }) => {
   const modalRef = useRef(null);
@@ -26,16 +27,14 @@ const Modal = ({ show, onClose, children }) => {
   return (
     <div
       ref={modalRef}
-      className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 transition-opacity duration-500 ${
-        show ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      className={`modal-background${show ? " show" : ""}`}
       onClick={handleBackgroundClick}
     >
-      <div className="bg-white p-6 rounded-lg max-w-lg max-h-full overflow-auto relative transition-transform duration-300 transform scale-95 hover:scale-100">
+      <div className="modal-content">
         <button
-          className="absolute top-0 right-0 m-2 text-2xl text-black hover:text-gray-700"
+          className="close-button"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // Prevents click from propagating to modal-background
             onClose();
           }}
         >

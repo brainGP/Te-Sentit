@@ -46,9 +46,8 @@ const Countdown = ({ birthday }) => {
 
   return (
     <div className="text-center mt-40 mb-8">
-      <h2 className="text-5xl font-bold mb-8 animate-bounce">
-        Мөнгөншагай Сүнжидмаа
-      </h2>
+      <span className="text-xl text-pink-600 ">Happy Birthday!</span>
+      <h2 className="text-5xl font-bold mb-8 ">Мөнгөншагай Сүнжидмаа</h2>
       <p className="text-2xl mb-2">
         Нас: <span className="text-3xl text-blue-500">{age}</span>
       </p>
@@ -67,7 +66,7 @@ const Countdown = ({ birthday }) => {
             </div>
           ))
         ) : (
-          <span className="text-lg">Happy Birthday!</span>
+          <span className="text-xl">Happy Birthday!</span>
         )}
       </div>
     </div>
