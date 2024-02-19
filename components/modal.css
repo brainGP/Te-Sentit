@@ -4,13 +4,14 @@
   display: none;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: fixed; /* Ensures the modal covers the entire screen and is fixed */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1000;
+  z-index: 1000; /* Keeps the modal on top */
+  overflow-y: auto; /* Allows scrolling within the modal background if needed */
 }
 
 .modal-background.show {
@@ -23,14 +24,17 @@
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
   max-width: 600px;
-  overflow-y: auto;
+  width: 80%;
+  /* height: auto; Removed to allow the content to define the height */
+  max-height: 80vh; /* Maximum height before scrolling */
+  overflow-y: auto; /* Allows the content to be scrolled */
   font-family: "Homemade Apple", cursive;
   font-size: 20px;
   line-height: 1.6;
   box-sizing: border-box;
   position: relative;
+  margin: 20px; /* Added margin for breathing room */
 }
 
 .close-button {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./modal.css"; // Ensure this path is correct.
+import "./modal.css"; // Adjust based on your file structure, respecting case sensitivity.
 
 const Modal = ({ show, onClose, children }) => {
   const modalRef = useRef(null);
@@ -11,12 +11,18 @@ const Modal = ({ show, onClose, children }) => {
       }
     };
 
-    document.addEventListener("keydown", handleEsc);
+    if (show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
+    document.addEventListener("keydown", handleEsc);
     return () => {
       document.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = ""; // Ensure body overflow is reset when component unmounts
     };
-  }, [onClose]);
+  }, [show, onClose]);
 
   const handleBackgroundClick = (e) => {
     if (e.target === modalRef.current) {
